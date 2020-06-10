@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4C43FF",
+    "navigationBarTitleText": "查询结果",
+    "navigationBarTextStyle":"white"
+  }
+}
