@@ -1,6 +1,6 @@
 {
   "rules":[{
     "action": "allow",
-    "page": "*e"
+    "page": "*"
   }]
 }

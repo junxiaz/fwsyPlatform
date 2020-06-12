@@ -1,0 +1,4 @@
+/* pages/result/result.wxss */
+.active1 {
+  color: #f00;
+}

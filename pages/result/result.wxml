@@ -1,0 +1,2 @@
+<!--pages/result/result.wxml-->
+<tab-bar active1="{{active1}}" tabItems="{{['menu', 'menu2', 'menu3']}}" bind:getIndex="handleTabClick"></tab-bar>
