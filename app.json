@@ -1,7 +1,6 @@
 {
   "pages": [
-    "pages/result/result",
-    "pages/logs/logs"
+    "pages/result/result"
   ],
   "window": {
     "backgroundTextStyle": "light",

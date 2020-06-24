@@ -1,2 +1,71 @@
 <!--pages/result/result.wxml-->
-<tab-bar active1="{{active1}}" tabItems="{{['menu', 'menu2', 'menu3']}}" bind:getIndex="handleTabClick"></tab-bar>
+<view class="container">
+
+  <view class="top">
+    <image class="pro-image" src="/assets/imgs/pro.png"></image>
+    <view class="pro-title">贵州茅台酒州茅台酒州茅台酒飞天茅台53度500ml酱香型白酒</view>
+    <swiper class="swiper" indicator-dots>
+      <block wx:for="{{3}}" wx:key="index">
+        <swiper-item class="pro-items">
+          <block wx:for="{{6}}" wx:key="index">
+            <view class="pro-item">
+              <text class="title">产品名称</text>
+              <text class="content">贵州茅天茅台</text>
+            </view>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="bottom">
+    <block wx:for="{{contentData}}" wx:key="index">
+      <view class="cont-item" bind:tap="showDialog" data-index="{{index}}">
+        <image class="cont-image" src="{{item.src}}"/>
+        <text class="cont-text">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+  <block wx:if="{{isDialog}}">
+    <view class="dialog">
+      <view class="dialog-wrap">
+        <view class="dialog-title">{{imgText.title}}</view>
+        <view class="dialog-cont">
+          <view class="dialog-cont-image">
+            <image mode="center" src="{{imgText.src}}"/>
+          </view>
+          <!-- 包装生产 -->
+          <!-- <block wx:for="{{4}}" wx:key="index">
+            <view class="dialog-cont-cont">
+              <text class="dialog-font1">生产批次</text>
+              <text class="dialog-font2">555555</text>
+            </view>
+          </block> -->
+
+          <!-- 物流配送 -->
+          <!-- <view class="trans-wrap">
+            <block wx:for="{{8}}" wx:key="index">
+              <view class="trans-item">
+                <view class="trans-time">06月16日</view>
+                <view class="trans-node"><image src="../../assets/imgs/node.png" /></view>
+                <view class="trans-event">
+                  <view>包装生产</view>
+                </view>
+              </view>
+            </block>
+          </view> -->
+
+          <!-- 区块链 -->
+          <view class="qkl-wrap">0x97w4825s44ds784s1sf4df68g3696t6I9r4779ws6h4Ivnr4779ws6h4Ivnx97w</view>
+
+          <!-- 公司介绍 -->
+          <!-- <text>中国贵州茅台酒厂(集团)有限责任公司是国家大型国有企业，茅台集团总部位于中国贵州省遵义市茅台镇，其主导产品贵州茅台酒历史悠久、源远流长，具白酒的鼻祖和典范代表，也是具有特色的绿色食品、有机食品和地理标志性产品。</text> -->
+        </view>
+      </view>
+      <view class="dialog-cancel">
+        <image src="../../assets/imgs/close.png" bind:tap="hideDialog"/>
+      </view>
+    </view>
+  </block>
+</view>

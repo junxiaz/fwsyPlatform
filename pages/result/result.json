@@ -1,6 +1,4 @@
 {
-  "usingComponents": {
-    "tab-bar" : "../../components/tabBar/tabBar"
-  },
+  "usingComponents": {},
   "navigationBarTitleText": "查询结果"
 }
